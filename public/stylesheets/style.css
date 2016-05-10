@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+body{
+  background-color:#FAFAFA;
+  font-family: "Open Sans",Helvetica,sans-serif,Arial;
+}
+.blq_sup{
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  z-index: 100;
+  margin-bottom: 0px;
+  background-color: #FFF;
+}
+.linea-menu{
+  /*background: #09F;*/
+  top-margin: 128px;
+  width: 100%;
+  height: 36px;
+}
+.enlace-registro{
+  list-style-type: none;
+  padding: .3em;
+}
+.registro-user{
+  position: absolute;
+  left: 865px;
+  top: 115px;
+  width: 300px;
+  height: 96px;
+  margin-top: -100px;
+  margin-left: -150px;
+}
+.portada{
+  position: absolute;
+  left: 45%;
+  top: 40%;
+  width: 300px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -150px;
+}
+.content-box-blue{
+  margin-top: 200px;
+  margin-bottom: 95px;
+  margin-left:400px;
+  margin-right:400px;
+  width:0dp;
+  height:0dp;
+  background-color: #d8ecf7;
+  border: 1px solid #afcde3;
+}
+
+.blq_titulo{
+  top: 0px;
+  height: 139px;
+  width: 100%;
+  background-color: #FFF;
+}
+.titulo{
+  height: 100px;
+  width: 500px;
+  margin: 0 auto;
+}
+.menu-principal{
+  /*background: #09F;*/
+  width: 100%;
+  height: 36px;
+  margin: 0 auto;
+  background: linear-gradient(#0099FF, #007ACC 70%);
+}
+
+.cuerpo{
+  background: #09F;
+  margin: 0 auto;
+  margin-top: 250px;
+  width: 880px;
+  min-height: 410px;
+  overflow: auto;
+}
+.bot_bar{
+  background: #09F;
+  left: 0px;
+  right: 0px;
+  height: 34px;
+  color: #FFF;
+  border-top: 1px solid #3A3FFF;
+  margin-top:50px;
+}
+.left_column{
+  margin: 10px 10px;
+  margin-right: 0px;
+  width:204px;
+  float: left;
+  min-height: 420px;
+  border-right: 4px solid #FFFFFF;
+  overflow: auto;
+}
+.right_column{
+  margin: 10px 10px;
+  padding: 10px 10px;
+  width:622px;
+  float: right;
+  min-height: 338px;
+  overflow: auto;
+  /*background: none repeat scroll 0% 0% #CCEBFF;*/
+}
+.syn_box{
+  margin: 10px 10px;
+  padding: 10px 10px;
+  width:602px;
+  float: right;
+  max-height: 338px;
+  background: none repeat scroll 0% 0% #CCEBFF;
+  overflow: auto;
+}
+.com_box{
+  margin: 10px 10px;
+  padding: 10px 10px;
+  width:602px;
+  float: right;
+  max-height: 338px;
+  background: none repeat scroll 0% 0% #CCEBFF;
+  overflow: auto;
+}
+/*.com_lst{
+	margin: 10px 10px;
+	padding: 10px 10px;
+	width:602px;
+	float: right;
+	max-height: 338px;
+	background: none repeat scroll 0% 0% #CCEBFF;
+	overflow: auto;
+}*/
+
