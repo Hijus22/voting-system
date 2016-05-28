@@ -5,9 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-//var routes = require('./routes/index');
 var users = require('./routes/users');
-var chat = require('./routes/chat');
+var routes = require('./routes/index');
+//var chat = require('./routes/chat');
 var login = require('./routes/login');
 
 var session = require('express-session');
@@ -21,6 +21,9 @@ var passport = require('passport')
     , LocalStrategy = require('passport-local').Strategy;
 var googleOAuth = require('./config/googleOAuth');
 
+//var logout = require('express-passport-logout');
+
+
 
 /**
  * Configure passport to log in a user
@@ -30,7 +33,9 @@ passport.use(new LocalStrategy(
     function(username, password, done) {
         console.log("Attempting local login for "+username);
         userDb.get("SELECT * FROM user WHERE username=?", username, function(err, user) {
-            if(err) {return done(err);}
+            if(err) {
+                console.log("HA HABIDO UN ERROR EN EL LOGIN")
+                return done(err);}
             if(!user) {
                 console.log("Username `"+username+"` not found");
                 return done(null, false, {message: 'Login unsuccessful'});
@@ -38,11 +43,12 @@ passport.use(new LocalStrategy(
             if(!bcrypt.compareSync(password, user.passhash)) {
                 return done(null, false, {message: 'Login unsuccessful'});
             }
+            console.log("Local login succesful for "+username);
             return done(null, user);
         });
 
     }
-))
+));
 
 // configure Passport to use GoogleOAuth
 passport.use(new GoogleStrategy({
@@ -106,8 +112,15 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //consider authentication first, then app functions
+//app.use('/login', login);
 app.use('/login', login);
-app.use('/', chat);
+app.use('/users', users);
+app.use('/', routes);
+
+
+//app.use('/', routes);
+//app.use('/users', users);
+//app.use('/login', login);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -115,6 +128,7 @@ app.use(function(req, res, next) {
     err.status = 404;
     next(err);
 });
+
 
 // error handlers
 

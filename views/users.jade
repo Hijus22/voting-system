@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}
+
+block upperblock
+    div.blq_sup
+        div.blq_titulo
+            div.titulo
+                a(href="/"): img(src="images/banner.png")
+        div(id='tfheader')
+        div.linea-menu
+            div.menu-principal
+                ul(id="MenuDesplegable", class="MenuBarHorizontal")
+block middle
+    div.cuerpo
+        p(id="centro")
+
+block scripts
+    script(src='/javascripts/SpryMenuBar.js')
+    script(src='/javascripts/ActivateBar.js')
+    script(src='/javascripts/jquery.cookiesdirective.js')
+    script(src='/javascripts/ackCookies.js')
+    script(src='/javascripts/loadLists.js')
+    script(src='jWizard/jquery.jWizard.js')
+
+block content
+    h2= "contentBlock"
+
+block bottom
+    div.bot_bar
+        p(align='right')
+            font(size=2) - COM 372: Dynamic Web Design. Antonio Martinez Garin (2016) -

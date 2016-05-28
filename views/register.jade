@@ -1,0 +1,21 @@
+extends index
+
+block middle
+    div.cuerpo
+        h1= title
+        p(id="register") Register for an account on our server
+            form#localLogin(action="/login/register" method="post")
+                label Username:
+                    input#username(name="username")
+                br
+                label Display Name:
+                    input#displayName(name="displayName")
+                br
+                label Password:
+                    input#password(name="password" type="password")
+                br
+                label Confirm password:
+                    input#password2(name="password2" type="password")
+                br
+                button Register
+

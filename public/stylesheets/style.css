@@ -9,6 +9,10 @@ a {
   color: #00B7FF;
 }
 
+ol.d{
+  list-style-type: decimal;
+}
+
 body{
   background-color:#FAFAFA;
   font-family: "Open Sans",Helvetica,sans-serif,Arial;
@@ -81,7 +85,8 @@ body{
 }
 
 .cuerpo{
-  background: #09F;
+  /*background: #09F;*/
+  background: #FFF;
   margin: 0 auto;
   margin-top: 250px;
   width: 880px;

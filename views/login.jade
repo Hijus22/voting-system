@@ -1,0 +1,24 @@
+extends index
+
+block middle
+  div.cuerpo
+    h1= title
+    h2= errorMessage
+    p(id="login") Sign in using your account
+      form#localLogin(action="/login" method="post")
+        label Username:
+          input(name="username")
+        br
+        label Password:
+          input(name="password" type="password")
+        br
+        input(type="submit" value="Log in")
+    p.
+      #[a(href="/login/register") Register]
+      for an account on our chat server
+
+
+
+ // block middle
+ //   div.cuerpo
+ //     p(id="centro")

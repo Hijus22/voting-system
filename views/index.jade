@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  //p Welcome to #{title}
 
 block upperblock
   div.blq_sup
@@ -13,20 +13,22 @@ block upperblock
     div.linea-menu
       div.menu-principal
         ul(id="MenuDesplegable", class="MenuBarHorizontal")
-          li: a(href="/") Inicio
-          li: a(href="/") Peliculas
-          li
-            a(href="/", class="MenuBarItemSubmenu") Iniciar Sesion
-              ul
-                li
-                  a(href="/") Registrarse
 block middle
   div.cuerpo
-    p(id="centro")
+    p(id="centro"): h1 Welcome to the vote System
+    p(id="bpl")
+    p(id="lfp")
+    p(id="bl")
+    p(id='ucl')
+
 
 block scripts
   script(src='/javascripts/SpryMenuBar.js')
   script(src='/javascripts/ActivateBar.js')
+  script(src='/javascripts/jquery.cookiesdirective.js')
+  script(src='/javascripts/ackCookies.js')
+  script(src='/javascripts/loadResults.js')
+
 
 block content
   h2= "contentBlock"
